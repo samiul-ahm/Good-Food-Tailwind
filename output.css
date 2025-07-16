@@ -8,9 +8,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-7xl: 80rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -187,14 +187,8 @@
   .mt-\[124px\] {
     margin-top: 124px;
   }
-  .mr-\[56\] {
-    margin-right: 56;
-  }
   .mr-\[56px\] {
     margin-right: 56px;
-  }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -208,38 +202,17 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
-  .mb-14 {
-    margin-bottom: calc(var(--spacing) * 14);
-  }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
-  }
-  .mb-\[2\] {
-    margin-bottom: 2;
-  }
-  .mb-\[64px\] {
-    margin-bottom: 64px;
   }
   .mb-\[184px\] {
     margin-bottom: 184px;
   }
-  .mb-\[184pxt\] {
-    margin-bottom: 184pxt;
-  }
-  .ml-\[56\] {
-    margin-left: 56;
-  }
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-\[100vh\] {
     height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -247,20 +220,14 @@
   .w-\[424px\] {
     width: 424px;
   }
-  .w-fit {
-    width: fit-content;
-  }
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .max-w-7xl {
+    max-width: var(--container-7xl);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -271,8 +238,8 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -289,24 +256,13 @@
   .rounded-\[16px\] {
     border-radius: 16px;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-t-4 {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 4px;
-  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-  .border-black {
-    border-color: var(--color-black);
   }
   .bg-\[\#52C303\] {
     background-color: #52C303;
@@ -314,20 +270,11 @@
   .bg-\[\#52C30326\] {
     background-color: #52C30326;
   }
-  .bg-\[\#101010\] {
-    background-color: #101010;
-  }
-  .bg-\[\#\] {
-    background-color: #;
-  }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-btn-grenn {
     background-color: var(--color-btn-grenn);
   }
-  .bg-\[url\(\'\/assets\/hero-bg\.png\'\)\] {
-    background-image: url('/assets/hero-bg.png');
+  .bg-\[url\(\'\.\/assets\/hero-bg\.png\'\)\] {
+    background-image: url('./assets/hero-bg.png');
   }
   .bg-cover {
     background-size: cover;
@@ -347,9 +294,6 @@
   .px-\[32px\] {
     padding-inline: 32px;
   }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
-  }
   .py-3\.5 {
     padding-block: calc(var(--spacing) * 3.5);
   }
@@ -367,9 +311,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .align-middle {
-    vertical-align: middle;
   }
   .font-work-sans {
     font-family: var(--font-work-sans);
@@ -425,9 +366,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-60 {
     opacity: 60%;
   }
@@ -436,10 +374,6 @@
   }
   .opacity-80 {
     opacity: 80%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .sm\:scroll-smooth {
     @media (width >= 40rem) {
@@ -476,11 +410,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -491,7 +420,6 @@
       --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }

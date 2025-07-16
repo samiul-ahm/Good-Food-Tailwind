@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.5",
-    "tailwindcss": "^4.1.5"
+    "@tailwindcss/cli": "^4.1.5"
   },
   "name": "good-food-resturants",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
   "keywords": [],
   "author": "",
